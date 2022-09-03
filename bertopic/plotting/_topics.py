@@ -67,7 +67,7 @@ def visualize_topics(topic_model,
     # Visualize with plotly
     df = pd.DataFrame({"x": embeddings[:, 0], "y": embeddings[:, 1],
                        "Topic": topic_list, "Words": words, "Size": frequencies})
-    return _plotly_topic_visualization(df, topic_list, width, height)
+    return _plotly_topic_visualization(df, topic_list, width, height), df
 
 
 def _plotly_topic_visualization(df: pd.DataFrame,
