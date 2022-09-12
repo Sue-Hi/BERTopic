@@ -2173,6 +2173,8 @@ class BERTopic:
         self.topic_names = {key: f"{key}_" + "_".join([word[0] for word in values[:4]])
                             for key, values in
                             self.topics.items()}
+        self.all_documents = documents
+
 
     def _save_representative_docs(self, documents: pd.DataFrame):
         """ Save the most representative docs (3) per topic
